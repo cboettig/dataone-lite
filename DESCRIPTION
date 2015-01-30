@@ -1,5 +1,5 @@
-Package: rdatone
-Description: An R package for interacting with the Data Observatory Network of Earth (DataONE) and member repositories, including the KNB, DataDryad, and TreeBASE.  This package uses curl commands to query against the DataONE REST API directly, sidestepping the Java requirements of the existing `dataone` R package.  
+Package: dataonelite
+Description: A lightweight R package for interacting with the Data Observatory Network of Earth (DataONE) and member repositories.  This package uses httr-based CURL commands to query against the DataONE REST API directly, sidestepping the current Java requirements of the existing `dataone` R package.  It is meant only as a proof-of-principle and stop-gap implementation during the upgrade of the official `dataone` package; and provides neither a complete API interface or compatibility with the official `dataone` package.
 Title: R interface to the DataONE RESTful API
 Version: 0.0-1
 License: CC0
@@ -11,10 +11,9 @@ Authors@R: c(person("Carl", "Boettiger", role = c("aut", "cre"), email =
 VignetteBuilder: knitr
 Suggests:
     knitr,
-    reml,
     testthat,
-    dataone
 Imports:
-    XML,
-    httr
-
+    httr,
+    tools,
+    uuid,
+    XML

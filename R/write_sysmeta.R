@@ -1,14 +1,19 @@
+#' write_sysmeta
+#' 
 #' Generate minimal system metadata XML file 
 #' 
 #' @param file the path/name of the file to generate metadata for.  
 #' @param uid your user identifier as registered at cilogon.org
-#' @param identifier.  If create, will attempt to make an identifier with uuid.  extract will attempt to extract EML packageID identifiers.  Otherwise, just provide the identifier here.  
+#' @param id how to obtain the identifier.  If "create", will attempt to make an 
+#'       identifier with uuid.  "extract" will attempt to extract EML packageID
+#'       identifiers.  Otherwise, just provide the identifier here.  
 #' @param formatId if "guess", will base a guess on the file extension, otherwise specify format here
 #' @param affiliation affiliation as registered at http://cilogon.org certificate
 #' @param metafile the name of the output minimal system metadata file (NULL returns output to console)
 #' @return an XML object containing the dataone minimal system metadata, see schema definition for details (in xsd directory)
 #' @import XML
-#' @import tools
+#' @importFrom tools md5sum
+#' @import uuid
 write_sysmeta <- 
   function(file, 
            uid, 
@@ -46,13 +51,14 @@ write_sysmeta <-
           encoding="UTF-8")
 }
 
-
+#' getid
+#' 
+#' helper function to the get the id of a dataone object
 #' @param id if "extract" or "create", will attempt to do so.  
 #' @param file file need only be provided for extract 
 #' @export
 getid <- function(id, file = NULL){
   if(id == "create"){
-    require(uuid)
     id <- UUIDgenerate()
   } else if(id == "extract"){
     doc <- xmlParse(file)

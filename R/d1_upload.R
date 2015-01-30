@@ -1,5 +1,13 @@
-
-
+#' d1_upload
+#'
+#' upload an object to dataone
+#' @param object new data file to be uploaded
+#' @param uid the user id of the data maintainer
+#' @param id what identifier should be used for the object; default will try and guess from object metadata (e.g. EML metadata).
+#' @param cert path to the x509 certificate from https://cilogon.org/?skin=DataONE
+#' @param node The URL to the DataONE node we intend to update. Defaults to the KNB
+#' @param sysmeta the required system metadata for the package, geranted by default.
+#' @return httr::response object indicating the success or failure of the call
 
 #' @import httr
 #' @examples

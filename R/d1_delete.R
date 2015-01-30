@@ -1,7 +1,9 @@
+#' d1_delete
+#' 
 #' Archive a data object so that it is removed from indexing
 #' @param id the permanent identifier of the object
+#' @param cert path to the x509 certificate from https://cilogon.org/?skin=DataONE
 #' @param node the authoritativeNode where the data has been archived
-#' @param a path to a current dataone certificate
 #' @details To generate a valid certificate, visit https://cilogon.org/?skin=DataONE and download a certificate.  (If asked to execute or download `shibCILaunchGSCA.jnlp`, choose execute, which will launch the download.  Otherwise, download this file and run `javaws shibCILaunchGSCA.jnlp` on the command line to launch.  Requires a working Java webscript application.  
 #' @import httr
 #' @aliases d1_archive d1_delete

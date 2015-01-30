@@ -1,5 +1,6 @@
-#' get data or metadata given an identifier
+#' d1_get
 #' 
+#' get data or metadata given an identifier
 #' @param id the identifier of the object of interest 
 #' @param node the node url of the DataONE node.  Be default, uses the central dataone.org node.  Usually no need to adjust this.
 #' @param action return the object itself (`object`) or the system metadata (`meta`)? Defaults to `object` 
@@ -26,4 +27,5 @@ d1_get <- function(id,
   GET(url)
 }
 
+d1_download <- d1_get
 

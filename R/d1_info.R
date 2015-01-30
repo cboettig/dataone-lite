@@ -1,4 +1,5 @@
-
+#' d1_info
+#' 
 #' Get information about the services available at a node.  
 #' @param node the URL of the DataONE node of interest.  
 #' @return XML-noded description of the node in an httr response object.  

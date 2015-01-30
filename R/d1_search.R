@@ -1,10 +1,16 @@
-
-
+#' d1_search
+#' 
 #' Search the dataone repository by fields
 #' @param query the search query (character string)
-#' @param named string providing optional filters for the search, 
+#' @param search_field named string providing optional filters for the search, 
 #' e.g. c(author = "Wolkovich", identifier = "doi"), 
 #' @param fuzzy logical indicating whether fuzzy or only exact matches should be returned.  
+#' @param return_fields fields that should be returned by the search, see details.
+#' @param filter filters to apply (depends on engine, e.g. solr filters) 
+#' @param rows maximum number of search results
+#' @param format perferred fromat for search results
+#' @param node which dataone node to search, defaults to master node.
+#' @param engine search engine to use for queries, defaults to solr
 #' @details The current possible query terms for both search and return fields are given here: https://mule1.dataone.org/ArchitectureDocs-current/design/SearchMetadata.html#attribute-descriptions-and-notes 
 #' @import httr
 #' @export

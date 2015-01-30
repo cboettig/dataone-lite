@@ -37,7 +37,7 @@ The current possible query terms for both search and return fields are given her
 }
 \examples{
 \dontrun{
- d1_search("Boettiger", "author")
+ d1_search("Wolkovich", "author")
 }
 }
 

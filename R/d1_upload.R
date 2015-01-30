@@ -12,7 +12,7 @@
 #' @import httr
 #' @examples
 #' \dontrun{
-#' f <- system.file("doc", "reml_example.xml", package="reml")
+#' f <- system.file("doc", "reml_example.xml", package="EML")
 #' d1_upload(f, "boettiger", id=uuid::UUIDgenerate(), node = knb_test)
 #' }
 #' @export
@@ -32,11 +32,6 @@ d1_upload <- function(object,
        config=config(sslcert = cert))
 }
 
-# FIXME come up with a more helpful scheme for handling the node
-# user just wants to say "KNB" or "KNB", "test", not have to 
-# give these long URLs...
-
-knb_test <- "https://mn-demo-5.test.dataone.org/knb/d1/mn"
 
 
 ## tests: 

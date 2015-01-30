@@ -16,7 +16,7 @@
 #' @export
 #' @examples
 #' \dontrun{
-#'  d1_search("Boettiger", "author")
+#'  d1_search("Wolkovich", "author")
 #' }
 d1_search <- function(query, 
                       search_field, 

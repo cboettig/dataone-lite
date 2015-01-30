@@ -30,7 +30,7 @@ upload an object to dataone
 }
 \examples{
 \dontrun{
-f <- system.file("doc", "reml_example.xml", package="reml")
+f <- system.file("doc", "reml_example.xml", package="EML")
 d1_upload(f, "boettiger", id=uuid::UUIDgenerate(), node = knb_test)
 }
 }

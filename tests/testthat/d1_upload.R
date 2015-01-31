@@ -1,4 +1,6 @@
+library("dataonelite")
 library("httr")
+
 test_that("We can upload data to DataONE",
 {
   data(nodes)

@@ -4,8 +4,7 @@
 \alias{d1_info}
 \title{d1_info}
 \usage{
-d1_info(node = c("https://cn.dataone.org/cn/v1",
-  "https://knb.ecoinformatics.org/knb/d1/mn/v1/"))
+d1_info(node = "https://cn.dataone.org/cn/v1")
 }
 \arguments{
 \item{node}{the URL of the DataONE node of interest.}
